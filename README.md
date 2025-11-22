@@ -7,7 +7,7 @@ This repository includes:
 - ✔ Encoders for categorical features  
 - ✔ A complete **Streamlit web application**  
 - ✔ Clean code and easy setup  
-- ✔ Suitable for academic/project submissions or interviews  
+
 
 ---
 
