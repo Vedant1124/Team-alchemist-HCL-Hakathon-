@@ -105,7 +105,6 @@ The Streamlit UI allows you to:
 - Submit data and get instant churn prediction  
 - View churn probability  
 
-This makes the project ideal for **demo, interview, or practical evaluation**.
 
 ---
 
@@ -122,7 +121,7 @@ This makes the project ideal for **demo, interview, or practical evaluation**.
 The model outputs:
 - `0` → Customer will **not** churn  
 - `1` → Customer **will** churn  
-- Probability score for interpretability  
+
 
 ---
 
@@ -164,47 +163,9 @@ The Telco churn dataset typically includes:
 | UI | Streamlit |
 | ML Model | LightGBM |
 | Data Processing | Pandas, Scikit-learn |
-| Deployment | Local or Streamlit Cloud |
+| Deployment on Streamlit
 
----
 
-# 🚀 Deployment (Optional)
 
-### **Deploy on Streamlit Cloud**
-You can deploy this project for free:
 
-```
-https://streamlit.io/cloud
-```
-
-Upload your repo → Deploy → Done.
-
----
-
-# 💡 Future Enhancements
-
-You can extend this project by adding:
-
-- SHAP explainability  
-- Visual analytics dashboard  
-- A FastAPI backend  
-- Cloud deployment (Render / HuggingFace / Streamlit Cloud)  
-- User authentication  
-
----
-
-# 🙌 Acknowledgements
-
-- Dataset: **Telco Customer Churn**  
-- Libraries: Streamlit, LightGBM, Scikit-learn, Pandas  
-
----
-
-# ⭐ Final Note
-
-This project is:
-
-- Clean  
-- Easy to run  
-- Beginner-friendly  
 
