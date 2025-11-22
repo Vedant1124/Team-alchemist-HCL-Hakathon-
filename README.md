@@ -207,6 +207,4 @@ This project is:
 - Clean  
 - Easy to run  
 - Beginner-friendly  
-- Interview-ready  
 
-Feel free to improve and build on top of it!
