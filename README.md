@@ -61,23 +61,24 @@ We will complete the project in the following steps:
 
 ### **Step 1 — Data Import**
 - Load the dataset  
-- Inspect structure, missing values, and data types  
+- Inspect structure, missing values, analyze Distribution of data and outliers handling  
 
 ### **Step 2 — Data Cleaning**
 - Handle null or incorrect values  
 - Convert categorical variables to numeric using Label Encoding  
 
 ### **Step 3 — Feature Engineering**
-- Analyze important features (e.g., using Mutual Information)  
+- Analyze important features Using Feature Selection  
 - Select the top features for model building  
-- Scale numeric columns if required  
+
 
 ### **Step 4 — Handle Class Imbalance**
-- Use **SMOTE** to balance churn vs non-churn samples  
+- We will handle class imbalance using Sampling techniques 
 
 ### **Step 5 — Model Building**
-We plan to try multiple models:
+We plan to try multiple models for binary classification:
 
+- Logistic Regression
 - Random Forest  
 - XGBoost  
 - LightGBM  
@@ -90,8 +91,8 @@ Once models are trained, we will evaluate using:
 - Precision & Recall  
 - **ROC–AUC Curve**
 
-### **Step 7 — Deployment**
-- Create a simple Flask or FastAPI app for prediction  
+### **Step 7 — Integration**
+- Build a FastApi Backend
 - Build a frontend UI  
 
 ---
@@ -104,7 +105,7 @@ Once models are trained, we will evaluate using:
 - imbalanced-learn   
 - Matplotlib, Seaborn  
 - XGBoost / LightGBM  
-- Flask / FastAPI (for deployment)
+- Flask / FastAPI (for integration)
 
 ---
 
