@@ -25,6 +25,7 @@ This README outlines the steps we will follow as we **begin the project**.
 We will be working with the **Telco Customer Churn Dataset** which includes customer demographics, service usage information, billing details, and contract types.
 
 ### Key Features in the dataset:
+- `Customer Id` 
 - `gender`  
 - `SeniorCitizen`  
 - `Partner`  
