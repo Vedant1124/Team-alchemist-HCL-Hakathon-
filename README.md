@@ -1,146 +1,212 @@
-# Team-alchemist-HCL-Hakathon-
+# 📊 Customer Churn Prediction – Telco Dataset
 
-# 📊 Telco Customer Churn Prediction — Machine Learning Project
+An end-to-end Machine Learning project that predicts whether a telecom customer will **churn** (leave the service).  
+This repository includes:
 
-This repository contains the initial setup and plan for building a **Customer Churn Prediction** model using the Telco Customer Churn dataset.  
-The goal is to predict which customers are likely to discontinue the telecom service.
-
----
-
-## 🧠 1. Project Objective
-
-The purpose of this project is to:
-
-- Understand the factors that contribute to customer churn  
-- Build a machine learning model that can predict churn  
-- Handle class imbalance properly  
-- Evaluate the performance using standard metrics (Accuracy, Confusion Matrix, ROC–AUC)  
-
-This README outlines the steps we will follow as we **begin the project**.
+- ✔ A trained **LightGBM** churn prediction model  
+- ✔ Encoders for categorical features  
+- ✔ A complete **Streamlit web application**  
+- ✔ Clean code and easy setup  
+- ✔ Suitable for academic/project submissions or interviews  
 
 ---
 
-## 📁 2. Dataset Overview
+## 📁 Project Structure
 
-We will be working with the **Telco Customer Churn Dataset** which includes customer demographics, service usage information, billing details, and contract types.
-
-### Key Features in the dataset:
-- `Customer Id` 
-- `gender`  
-- `SeniorCitizen`  
-- `Partner`  
-- `Dependents`  
-- `PhoneService`  
-- `MultipleLines`  
-- `InternetService`  
-- `OnlineSecurity`  
-- `OnlineBackup`  
-- `DeviceProtection`  
-- `TechSupport`  
-- `StreamingTV`  
-- `StreamingMovies`  
-- `Contract`  
-- `PaperlessBilling`  
-- `PaymentMethod`  
-- `tenure`  
-- `MonthlyCharges`  
-- `TotalCharges`  
-
-### Target Variable:
-- `Churn`  
-  - **0 = No**  
-  - **1 = Yes**
-
-The dataset contains a **class imbalance** (more non-churn customers), which we will handle during preprocessing.
+```
+│── model1.pkl               # Trained LightGBM model  
+│── encoders.pkl             # Saved label encoders  
+│── streamlit_app.py         # Streamlit UI application  
+│── requirements.txt         # Dependencies  
+│── README.md                # Documentation  
+```
 
 ---
 
-## 🔄 3. Planned Workflow
+## 📌 Problem Statement
 
-We will complete the project in the following steps:
+Telecom companies face revenue loss when customers discontinue their services.  
+The objective of this project is to build a model that predicts **whether a customer is likely to churn**, allowing the business to proactively retain them.
 
-### **Step 1 — Data Import**
-- Loaded  the dataset from kaggle
-- Inspect structure, missing values, analyze Distribution of data and outliers handling  
+The dataset contains customer demographics, account details, and service usage features.
 
-### **Step 2 — Data Cleaning**
-- Handle null or incorrect values  
-- Convert categorical variables to numeric using Encoding Techniques  
+---
 
-### **Step 3 — Feature Engineering**
-- Analyze important features Using Feature Selection  
-- Select the top features for model building  
+# 🚀 How to Run the Project
 
+Follow these steps to run the Churn Prediction app on your local machine:
 
-### **Step 4 — Handle Class Imbalance**
-- We will handle class imbalance using Sampling techniques 
+---
 
-### **Step 5 — Model Building**
-We plan to try multiple models for binary classification:
+## **1️⃣ Clone the Repository**
 
-- Logistic Regression
-- Random Forest  
-- XGBoost  
+```bash
+git clone <your-github-repo-link>
+cd <your-repo-folder>
+```
+
+---
+
+## **2️⃣ Create a Virtual Environment (Recommended)**
+
+```bash
+python -m venv venv
+```
+
+### Activate it:
+
+#### Windows:
+```bash
+venv\Scripts\activate
+```
+
+#### macOS/Linux:
+```bash
+source venv/bin/activate
+```
+
+---
+
+## **3️⃣ Install Requirements**
+
+```bash
+pip install -r requirements.txt
+```
+
+This installs:
+- Streamlit  
+- Pandas  
+- NumPy  
+- Scikit-learn  
 - LightGBM  
 
-### **Step 6 — Model Evaluation**
-Once models are trained, we will evaluate using:
+---
 
-- Accuracy  
-- Confusion Matrix  
-- Precision & Recall  
-- **ROC–AUC Curve**
+## **4️⃣ Run the Streamlit App**
 
-### **Step 7 — Integration**
-- Build a FastApi Backend
-- Build a frontend UI  
+```bash
+streamlit run streamlit_app.py
+```
+
+Once launched, the app will open at:
+
+```
+http://localhost:8501
+```
 
 ---
 
-## 🛠️ 4. Tools and Libraries We Will Use
+# 🖥️ Streamlit Application
 
-- **Python**  
-- Pandas, NumPy  
-- Scikit-learn  
-- imbalanced-learn   
-- Matplotlib, Seaborn  
-- XGBoost / LightGBM  
-- Flask / FastAPI (for integration)
+The Streamlit UI allows you to:
 
----
+- Select **categorical values** from dropdowns  
+- Input numeric values (e.g., tenure, monthly charges)  
+- Submit data and get instant churn prediction  
+- View churn probability  
 
-## 📂 5. Project Files (Planned)
-
-- `data/` — Raw dataset  
-- `notebooks/` — Jupyter notebooks for EDA and model building  
-- `scripts/` — Python scripts  
-- `model/` — Saved model & encoders  
-- `app/` — Code for web app (optional)  
-- `README.md` — Project documentation  
+This makes the project ideal for **demo, interview, or practical evaluation**.
 
 ---
 
-## 🚀 6. Current Status
+# 🧠 Model Information
 
-We have **just started the project**  
-and are currently at:
+- **Model Used:** LightGBM Classifier  
+- **Preprocessing:** Label Encoding applied to all categorical columns  
+- **Training Steps:**
+  - Handling missing values  
+  - Label Encoding  
+  - Train-test split  
+  - Model training  
 
-✔ Dataset Understanding  
-✔ Planned the entire workflow  
-✔ Setting up project structure  
-
-
----
-
-## 📝 7. Next Steps
-
-- Begin with EDA  
-- Clean and preprocess the dataset  
-- Perform feature selection  
-- Build and compare multiple models  
-- Model evaluation  
-- Integration  
+The model outputs:
+- `0` → Customer will **not** churn  
+- `1` → Customer **will** churn  
+- Probability score for interpretability  
 
 ---
 
+# 📦 Dataset Features
 
+The Telco churn dataset typically includes:
+
+### **Customer Information**
+- Gender  
+- SeniorCitizen  
+- Partner  
+- Dependents  
+
+### **Service Information**
+- PhoneService  
+- MultipleLines  
+- InternetService  
+- OnlineSecurity  
+- OnlineBackup  
+- DeviceProtection  
+- TechSupport  
+- StreamingTV  
+- StreamingMovies  
+
+### **Account Information**
+- Contract  
+- PaperlessBilling  
+- PaymentMethod  
+- Tenure  
+- MonthlyCharges  
+- TotalCharges  
+
+---
+
+# 🛠️ Tech Stack
+
+| Component | Technology |
+|----------|------------|
+| UI | Streamlit |
+| ML Model | LightGBM |
+| Data Processing | Pandas, Scikit-learn |
+| Deployment | Local or Streamlit Cloud |
+
+---
+
+# 🚀 Deployment (Optional)
+
+### **Deploy on Streamlit Cloud**
+You can deploy this project for free:
+
+```
+https://streamlit.io/cloud
+```
+
+Upload your repo → Deploy → Done.
+
+---
+
+# 💡 Future Enhancements
+
+You can extend this project by adding:
+
+- SHAP explainability  
+- Visual analytics dashboard  
+- A FastAPI backend  
+- Cloud deployment (Render / HuggingFace / Streamlit Cloud)  
+- User authentication  
+
+---
+
+# 🙌 Acknowledgements
+
+- Dataset: **Telco Customer Churn**  
+- Libraries: Streamlit, LightGBM, Scikit-learn, Pandas  
+
+---
+
+# ⭐ Final Note
+
+This project is:
+
+- Clean  
+- Easy to run  
+- Beginner-friendly  
+- Interview-ready  
+
+Feel free to improve and build on top of it!
