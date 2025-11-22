@@ -103,7 +103,7 @@ The Streamlit UI allows you to:
 - Select **categorical values** from dropdowns  
 - Input numeric values (e.g., tenure, monthly charges)  
 - Submit data and get instant churn prediction  
-- View churn probability  
+  
 
 
 ---
