@@ -60,12 +60,12 @@ The dataset contains a **class imbalance** (more non-churn customers), which we 
 We will complete the project in the following steps:
 
 ### **Step 1 — Data Import**
-- Load the dataset  
+- Loaded  the dataset from kaggle
 - Inspect structure, missing values, analyze Distribution of data and outliers handling  
 
 ### **Step 2 — Data Cleaning**
 - Handle null or incorrect values  
-- Convert categorical variables to numeric using Label Encoding  
+- Convert categorical variables to numeric using Encoding Techniques  
 
 ### **Step 3 — Feature Engineering**
 - Analyze important features Using Feature Selection  
@@ -126,10 +126,9 @@ We have **just started the project**
 and are currently at:
 
 ✔ Dataset Understanding  
-✔ Planning the workflow  
+✔ Planned the entire workflow  
 ✔ Setting up project structure  
 
-Further sections will be updated as we progress.
 
 ---
 
@@ -139,7 +138,8 @@ Further sections will be updated as we progress.
 - Clean and preprocess the dataset  
 - Perform feature selection  
 - Build and compare multiple models  
-- Document results and update README  
+- Model evaluation  
+- Integration  
 
 ---
 
